@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "219686756201",
+    "firebase_url": "https://e-lkpd.firebaseio.com",
+    "project_id": "e-lkpd",
+    "storage_bucket": "e-lkpd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219686756201:android:90ed06a57ae48caa9767f8",
+        "android_client_info": {
+          "package_name": "com.elkpd.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219686756201-tv3e6cad19ltuq19nvb3mscg2nbg0t2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPn4wAocRls9lDMHX5xYABCuevUmT36KA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219686756201-tv3e6cad19ltuq19nvb3mscg2nbg0t2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

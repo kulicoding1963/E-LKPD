@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">E-LKPD</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">androi tudio@androi om</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="header_welcome">Selamat Datang di LKPD <i>Mobile Learning Berbasis Problem Based Learning</i> (PBL) pada Pokok Bahasan Perubahan Lingkungan untuk Peserta Didik Kelas X SMA.</string>
+    <string name="todo">TODO</string>
+    <string name="nama_pengembang">Nama Pengembang</string>
+    <string name="fitra_purnama_agung_s_pd">Fitra Purnama Agung, S.Pd. </string>
+    <string name="asal">Asal</string>
+    <string name="lampung">Lampung</string>
+    <string name="domisili">Domisili</string>
+    <string name="yogyakarta">Yogyakarta</string>
+    <string name="instansi">Instansi</string>
+    <string name="program_studi_pendidikan_biologi">Program Studi Pendidikan Biologi</string>
+    <string name="universitas_negeri_yogyakarta">Universitas Negeri Yogyakarta </string>
+    <string name="program_pascasarjana">Program Pascasarjana</string>
+    <string name="misi">Misi</string>
+    <string name="semoga_lkpd_mobile_learning_ini_dapat_membantu_peserta_didik_kelas_x_sma_dalam_memecahkan_masalah_tentang_pokok_bahasan_perubahan_lingkungan_dan_dapat_meningkatkan_literasi_lingkungan_peserta_didik_kelas_x_sma">Semoga LKPD mobile learning ini dapat membantu peserta didik kelas X SMA dalam memecahkan masalah tentang pokok bahasan Perubahan Lingkungan dan dapat meningkatkan Literasi Lingkungan peserta didik kelas X SMA.</string>
+    <string name="kritik_saran">Kritik/Saran</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="tentang">Tentang</string>
+    <string name="petunjuk_penggunaan">Petunjuk Penggunaan</string>
+    <string name="kurikulum">Kurikulum</string>
+    <string name="kegiatan_pembelajaran">Kegiatan Pembelajaran</string>
+    <string name="kuis">Kuis</string>
+    <string name="daftar_pustaka">Daftar Pustaka</string>
+    <string name="e_lkpd">E-LKPD</string>
+    <string name="lkpd_mobile_learning_ini_merupakan_media_bahan_ajar_berbasis_problem_based_learning_masalah_yang_dapat_membantu_peserta_didik_dalam_belajar_memecahkan_masalah_dan_mengajak_peserta_didik_untuk_aktif_selama_pembelajaran_terkait_pokok_bahasan_perubahan_lingkungan_serta_untuk_meningkatkan_literasi_lingkungan_peserta_didik_kelas_x_sma">LKPD <i>mobile learning</i> ini merupakan media/bahan ajar berbasis <i>Problem Based Learning</i>/masalah yang dapat membantu peserta didik dalam belajar memecahkan masalah dan mengajak peserta didik untuk aktif selama pembelajaran terkait pokok bahasan perubahan lingkungan serta untuk meningkatkan literasi lingkungan peserta didik kelas X SMA.</string>
+
+    <string name="beranda">Beranda</string>
+    <string name="soal">Aktivitas</string>
+    <string name="jawaban">Evaluasi</string>
+
+    <string name="_1a"> Tidak seimbangnya hubungan eksositem di daerah tersebut</string>
+    <string name="_1b"> Kualitas lingkungan di daerah tersebut mulai menurun</string>
+    <string name="_1c"> Kerusakan lingkungan berupa hutan akibat ulah manusia</string>
+    <string name="_1d"> Siklus hidup belelang setan yang begitu sangat cepat</string>
+    <string name="_1e"> Kekurangan makanan sehingga menyerang ladang warga</string>
+
+    <string name="_2a"> Dihuni oleh tumbuhan, hewan, dan mikroorganisme saprofit</string>
+    <string name="_2b"> Pertambahan populasi masing-masing komponen sama</string>
+    <string name="_2c"> Aliran energi produsen ke konsumen paling cepat terjadi</string>
+    <string name="_2d"> Tidak terjadi peledakan populasi pada salah satu komponen biotiknya</string>
+    <string name="_2e"> Aliran energi dan materi berjalan searah dari konsumen ke produsen</string>
+
+    <string name="_3a"> Perlindungan lingkungan hidup</string>
+    <string name="_3b"> Pengelolaan lingkungan hidup</string>
+    <string name="_3c"> Rencana peraturan daerah setempat</string>
+    <string name="_3d"> Koordinasi penataan ruang daerah</string>
+    <string name="_3e"> Rencana tata ruang wilayah nasional</string>
+
+    <string name="_4a"> Peraturan pemerintah tentang rencana tata ruang wilayah nasional</string>
+    <string name="_4b"> Peraturan pemerintah terkait perlindungan dan pengelolaan lingkungan hidup</string>
+    <string name="_4c"> Peraturan pemerintah terkait perlindungan kerusakan hutan setempat</string>
+    <string name="_4d"> Peraturan pemerintah tentang rencana pengelolaan daerah setempat</string>
+    <string name="_4e"> Peraturan pemerintah tentang penataan ruang daerah setempat</string>
+
+    <string name="_5a"> Menyebabkan kerusakan lahan pertanian</string>
+    <string name="_5b"> Terjadi pencemaran tanah berupa kekeringan</string>
+    <string name="_5c"> Menyebabkan gagal penen bagi para petani</string>
+    <string name="_5d"> Kekeringan mengakibatkan munculnya hama</string>
+    <string name="_5e"> Menimbulkan radiasi panas di lahan petani</string>
+
+    <string name="_6a"> Mengakibatkan tanah longsor dan mudah banjir</string>
+    <string name="_6b"> Pengurangan daya serap air tanah dan kualitas tanah</string>
+    <string name="_6c"> Pemanasan global akibat efek bangunan hotel</string>
+    <string name="_6d"> Mengakibatkan pencemaran tanah, udara, dan air</string>
+    <string name="_6e"> Kerusakan ekosistem karst dan resiko kekeringan</string>
+
+    <string name="_7a"> ISPA</string>
+    <string name="_7b"> Batuk</string>
+    <string name="_7c"> Pilek</string>
+    <string name="_7d"> Asma</string>
+    <string name="_7e"> Demam</string>
+
+    <string name="_8a"> Karena fungsi penyerapan air tanah di kawasan tersebut terganggu</string>
+    <string name="_8b"> Flora dan fauna di daerah karst gunung sewu tidak bisa bertahan hidup</string>
+    <string name="_8c"> Karena ekosistem di daerah gunung sewu sudah tidak seimbang lagi</string>
+    <string name="_8d"> Karena daerah kasrt gunung sewu tersebut menjadi gundul dan gersang</string>
+    <string name="_8e"> Kerena fungsi penyerapan karbondioksida di atmosfer terganggu</string>
+
+    <string name="_9a"> Pikukuh karuhun yaitu kepercayaan yang melarang masyarakatnya memasuki hutan, menebang pohon, membuka ladang dan mengambil hasil hutan lainnya. </string>
+    <string name="_9b"> Baladewi, Rumongso Handarbeni, wajib Hangrungkepi, Mulat Sarira Hangrosowani, artinya merasa memiliki, saling menjaga dan melindungi, harus berani mempertahankan bila ada yang mengusik.</string>
+    <string name="_9c"> Pranoto mongso yakni aturan bercocok tanam yang didasarkan pada tanda-tanda alam  dalam mongso yang berkaitan untuk menghindari eksploitasi sumber daya alam sehingga dapat menjaga keseimbangan ekosistem.</string>
+    <string name="_9d"> Karampuang yaitu komunitas adat yang memiliki norma-norma adat untuk menjaga hutan seperti larangan menyadap enau (aren) di pagi hari agar tidak mengganggu hewan yang sedang mencari makan di pagi hari.</string>
+    <string name="_9e"> Piplantri yang mengharuskan menanam 111 pohon ketika seorang bayi perempuan lahir dan Nyabuk Gunung yaitu cara bercocok tanam dengan membuat teras sawah yang dibentuk menurut garis kontur untuk menghindari terjadinya longsor.</string>
+
+    <string name="_10a"> Melakukan rehabilitasi atau reklamasi disetiap bekas tahapan proses pertambangan untuk dikembangkan sebagai lahan pertanian bagi masyarakat</string>
+    <string name="_10b"> Melakukan rehabilitasi atau reklamasi disetiap bekas tahapan proses pertambangan untuk dikembangkan kembali menjadi hutan dan dijaga</string>
+    <string name="_10c"> Mengolah bekas tambang sebagai tempat wisata yang menarik dan unik serta pengolahan tersebut dapat meningkatkan perekonomian masyarakat</string>
+    <string name="_10d"> Mengolah bekas tambang sebagai tempat peternakan unggas yang dapat dijadikan sebagai usaha bagi masyarakat untuk mendukung perekonomiannya</string>
+    <string name="_10e"> Melakukan rehabilitasi atau reklamasi disetiap bekas tahapan proses pertambangan untuk dikembangkan menjadi bendungan untuk menampung air</string>
+
+    <string name="_11a"> Melaksanakan kampanye 6R yakni (<i>redesign, reduce, remove, reuse, recycle, dan recover</i>)</string>
+    <string name="_11b"> Memperhentikan pertambangan-pertambangan yang mengakibatkan lahan kritis</string>
+    <string name="_11c"> Menutup pabrik-pabrik yang tidak menggunanakan bahan ramah lingkungan</string>
+    <string name="_11d"> Menggalakkan kembali Pendidikan lingkungan di sekolah maupun di masyarakat</string>
+    <string name="_11e"> Menghimbau masyarakat untuk tidak membuang sampah rumah tangga ke sungai</string>
+
+    <string name="_12a"> 1, 2, dan 5</string>
+    <string name="_12b"> 1, 3, dan 4</string>
+    <string name="_12c"> 1, 2, dan 3</string>
+    <string name="_12d"> 2, 3, dan 5</string>
+    <string name="_12e"> 2, 3, dan 4</string>
+
+    <string name="_13a"> Memberikan sosialisai kepada masyarakat dan wisatawan tentang pentingnya membuang sampah pada tempatnya</string>
+    <string name="_13b"> Mengajak masayarakat dan wisatawan untuk membiasakan membawa kantung yang ramah lingkungan/ tidak sekali pakai</string>
+    <string name="_13c"> Menambah peralatan dan petugas pengelolahan sampah di lokasi wisata dan bank sampah disetiap desa</string>
+    <string name="_13d"> Melarang wisatawan membawa wadah berupa kantung plastik ke lokasi wisata, untuk menghindari membuang sampah sembarangan</string>
+    <string name="_13e"> Memberikan sanksi yang tegas kepada masyakarat maupun wisatawan yang membuang sampah sembarang</string>
+
+    <string name="_14a"> 1, 2, dan 3</string>
+    <string name="_14b"> 1, 3, dan 4</string>
+    <string name="_14c"> 1, 2, dan 5</string>
+    <string name="_14d"> 2, 3, dan 5</string>
+    <string name="_14e"> 2, 4, dan 5</string>
+
+    <string name="_15a"> Pencemaran air tersebut menyebabkan mewabahnya bakteri <i>Escherichia coli</i></string>
+    <string name="_15b"> Pencemaran air tersebut menyababkan ikan-ikan disungai menjadi mati</string>
+    <string name="_15c"> Pencemaran air tersebut menyebabkan tanaman di area sungai menjadi mati</string>
+    <string name="_15d"> Pencemaran air tersebut menyebabkan mewabahnya bakteri <i>Corynebacterium</i></string>
+    <string name="_15e"> Pencemaran air tersebut menyebabkan aliran disungai menjadi menyumbat</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
