@@ -48,14 +48,15 @@ public class Utils {
         return cek;
     }
 
-    public static void displayImageOriginal(Context ctx, ImageView img, Uri uri) {
+    public static void displayImageOriginal(Context ctx, ImageView img, Uri uri,int width,int height) {
         Glide.with(ctx)
                 .load(uri)
                 .error(R.drawable.ic_error)
-                .centerCrop()
+                .centerInside()
                 .transition(new DrawableTransitionOptions().crossFade(2000))
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .override(700,1000)
+                .skipMemoryCache(true)
+                .override(width,height)
                 .into(img);
     }
 

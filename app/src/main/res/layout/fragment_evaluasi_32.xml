@@ -361,12 +361,12 @@
             android:id="@+id/textView58"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="32dp"
             android:text="Pengolahan Limbah Anorganik"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/answer15" />
+            app:layout_constraintEnd_toEndOf="@+id/answer15"
+            app:layout_constraintStart_toStartOf="@+id/answer14"
+            app:layout_constraintTop_toBottomOf="@+id/answer14" />
 
         <TextView
             android:id="@+id/textView59"
@@ -573,7 +573,7 @@
 
         <TextView
             android:id="@+id/textView64"
-            android:layout_width="333dp"
+            android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"

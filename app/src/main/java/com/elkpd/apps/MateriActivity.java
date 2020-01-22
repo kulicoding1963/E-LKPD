@@ -221,6 +221,8 @@ public class MateriActivity extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(MateriActivity.this, AktivitasActivity.class);
                         intent.putExtra(AktivitasActivity.TYPE, 13);
+                        intent.putExtra(AktivitasActivity.LOGIN_HASH, hash);
+                        intent.putExtra(AktivitasActivity.NAME, name);
                         intent.putExtra(AktivitasActivity.URL, "1_6.pdf");
                         startActivity(intent);
                     }

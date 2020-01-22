@@ -41,6 +41,7 @@ public class EvaluasiActivity extends AppCompatActivity {
     private List<HasilEvaluasi> dataHasils = new ArrayList<>();
     private DatabaseReference mDatabase;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,10 @@ public class EvaluasiActivity extends AppCompatActivity {
         final String url = getIntent().getStringExtra(URL);
 
         RecyclerView rvEvaluasi = findViewById(R.id.rvEvaluasi);
+
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Hasil Evaluasi Kegiatan");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         adapterHasil = new HasilEvaluasiAdapter(dataHasils);
         rvEvaluasi.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -90,7 +95,13 @@ public class EvaluasiActivity extends AppCompatActivity {
         });
     }
 
-    private void requestData(String kegiatan,String aktivitas) {
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    private void requestData(String kegiatan, String aktivitas) {
         Utils.showDialog(EvaluasiActivity.this);
         mDatabase.child(kegiatan).child(aktivitas).addListenerForSingleValueEvent(new ValueEventListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -105,9 +116,9 @@ public class EvaluasiActivity extends AppCompatActivity {
                         dataHasil.setAnwswer1(x.child("answer1").getValue() == null ? "" : Objects.requireNonNull(x.child("answer1").getValue()).toString());
                         dataHasil.setAnwswer2(x.child("answer2").getValue() == null ? "" : Objects.requireNonNull(x.child("answer2").getValue()).toString());
                         dataHasil.setAnwswer3(x.child("answer3").getValue() == null ? "" : Objects.requireNonNull(x.child("answer3").getValue()).toString());
-                        dataHasil.setAnwswer4(x.child("answer3").getValue() == null ? "" : Objects.requireNonNull(x.child("answer4").getValue()).toString());
-                        dataHasil.setAnwswer5(x.child("answer3").getValue() == null ? "" : Objects.requireNonNull(x.child("answer5").getValue()).toString());
-                        dataHasil.setAnwswer6(x.child("answer3").getValue() == null ? "" : Objects.requireNonNull(x.child("answer6").getValue()).toString());
+                        dataHasil.setAnwswer4(x.child("answer4").getValue() == null ? "" : Objects.requireNonNull(x.child("answer4").getValue()).toString());
+                        dataHasil.setAnwswer5(x.child("answer5").getValue() == null ? "" : Objects.requireNonNull(x.child("answer5").getValue()).toString());
+                        dataHasil.setAnwswer6(x.child("answer6").getValue() == null ? "" : Objects.requireNonNull(x.child("answer6").getValue()).toString());
                         dataHasils.add(dataHasil);
                     }
                     adapterHasil.notifyDataSetChanged();

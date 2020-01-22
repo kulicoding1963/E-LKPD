@@ -1,6 +1,7 @@
 package com.elkpd.apps;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -49,6 +50,7 @@ public class HomeActivity extends AppCompatActivity {
     public static boolean isLogged = false;
     private String type;
     private String name;
+    private TextView titleBar;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -58,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setTitle(null);
-        final TextView titleBar = findViewById(R.id.titleBar);
+        titleBar = findViewById(R.id.titleBar);
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -135,7 +137,7 @@ public class HomeActivity extends AppCompatActivity {
                     Fragment fragment = new KegiatanPembelajaranFragment();
                     displaySelected(fragment);
                 }else{
-                    showLoginDialog();
+                    showLoginDialogSiswa();
                 }
             }
         });
@@ -144,11 +146,15 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isLogged){
-                    titleBar.setText(getResources().getString(R.string.kuis));
-                    Fragment fragment = new KuisFragment();
-                    displaySelected(fragment);
+                    if(getType().equals("guru")){
+                        startActivity(new Intent(HomeActivity.this,HasilKuisActivity.class));
+                    }else{
+                        titleBar.setText(getResources().getString(R.string.kuis));
+                        Fragment fragment = new KuisFragment();
+                        displaySelected(fragment);
+                    }
                 }else {
-                    showLoginDialog();
+                    showLoginDialogSiswa();
                 }
             }
         });
@@ -195,7 +201,7 @@ public class HomeActivity extends AppCompatActivity {
             if(isLogged){
                 Toast.makeText(getBaseContext(), "Anda suda login sebagai "+type, Toast.LENGTH_SHORT).show();
             }else{
-                showLoginDialog();
+                showLoginDialogGuru();
             }
         }
         return super.onOptionsItemSelected(item);
@@ -218,11 +224,17 @@ public class HomeActivity extends AppCompatActivity {
         }, 2000);
     }
 
+    @Override
+    protected void onDestroy() {
+        isLogged = false;
+        super.onDestroy();
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private void showLoginDialog() {
+    private void showLoginDialogGuru() {
         final Dialog dialog = new Dialog(HomeActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_login);
+        dialog.setContentView(R.layout.dialog_login_guru);
         dialog.setCancelable(true);
 
         final WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
@@ -233,21 +245,6 @@ public class HomeActivity extends AppCompatActivity {
         final EditText edUsername = dialog.findViewById(R.id.ed_username);
         final EditText edPassword = dialog.findViewById(R.id.ed_password);
         Button btnLoginGuru = dialog.findViewById(R.id.btn_login_guru);
-        Button btnLoginSiswa = dialog.findViewById(R.id.btn_login_siswa);
-
-        btnLoginSiswa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!edUsername.getText().toString().equals("") || !edPassword.getText().toString().equals("")) {
-                    dialog.dismiss();
-                    setType("siswa");
-                    setName(edUsername.getText().toString().trim());
-                    isLogged = true;
-                } else {
-                    Toast.makeText(getBaseContext(), "Nama atau NIS tidak boleh kosong!", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
 
         btnLoginGuru.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -258,6 +255,7 @@ public class HomeActivity extends AppCompatActivity {
                         setType("guru");
                         setName("admin");
                         isLogged = true;
+                        startActivity(new Intent(HomeActivity.this,HasilKuisActivity.class));
                     } else {
                         Toast.makeText(getBaseContext(), "Username atau password salah!", Toast.LENGTH_SHORT).show();
                     }
@@ -271,6 +269,44 @@ public class HomeActivity extends AppCompatActivity {
         dialog.getWindow().setAttributes(lp);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    private void showLoginDialogSiswa() {
+        final Dialog dialog = new Dialog(HomeActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_login_siswa);
+        dialog.setCancelable(true);
+
+        final WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(Objects.requireNonNull(dialog.getWindow()).getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+
+        final EditText edUsername = dialog.findViewById(R.id.ed_username);
+        Button btnLoginSiswa = dialog.findViewById(R.id.btn_login_siswa);
+
+        btnLoginSiswa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!edUsername.getText().toString().equals("")) {
+                    dialog.dismiss();
+                    setType("siswa");
+                    setName(edUsername.getText().toString().trim());
+                    isLogged = true;
+                } else {
+                    Toast.makeText(getBaseContext(), "Nama  tidak boleh kosong!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
+    }
+
+    public void goHomePage(){
+        titleBar.setText(getResources().getString(R.string.beranda));
+        Fragment fragment = new BerandaFragment();
+        displaySelected(fragment);
+    }
     public String getType() {
         return type;
     }
