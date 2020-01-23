@@ -2,10 +2,13 @@ package com.elkpd.apps.ui;
 
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.os.Environment;
@@ -37,10 +40,11 @@ import java.io.File;
  */
 public class LKPDFragment extends Fragment {
 
-    private FloatingActionButton fabAdd,fabDownload,fabShare;
+    private FloatingActionButton fabAdd, fabDownload, fabShare;
     private boolean isRotate = false;
 
-    public LKPDFragment() {}
+    public LKPDFragment() {
+    }
 
 
     @Override
@@ -55,7 +59,7 @@ public class LKPDFragment extends Fragment {
                     @Override
                     public void handleLinkEvent(LinkTapEvent event) {
                         Intent intent = new Intent(requireActivity(), WebClientActivity.class);
-                        intent.putExtra(WebClientActivity.URL,event.getLink().getUri());
+                        intent.putExtra(WebClientActivity.URL, event.getLink().getUri());
                         startActivity(intent);
                     }
                 })
@@ -71,11 +75,11 @@ public class LKPDFragment extends Fragment {
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isRotate = ViewAnimation.rotateFab(view,!isRotate);
-                if(isRotate){
+                isRotate = ViewAnimation.rotateFab(view, !isRotate);
+                if (isRotate) {
                     ViewAnimation.showIn(fabDownload);
                     ViewAnimation.showIn(fabShare);
-                }else{
+                } else {
                     ViewAnimation.showOut(fabDownload);
                     ViewAnimation.showOut(fabShare);
                 }
@@ -85,65 +89,77 @@ public class LKPDFragment extends Fragment {
         fabDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Utils.showDialog(requireContext());
-                FirebaseStorage storage = FirebaseStorage.getInstance();
-                StorageReference storageRef = storage.getReferenceFromUrl("gs://e-lkpd.appspot.com");
-                StorageReference  islandRef = storageRef.child("Konten").child("E-LKPD Perubahan Lingkungan.pdf");
+                if (checkPermission()) {
+                    Utils.showDialog(requireContext());
+                    FirebaseStorage storage = FirebaseStorage.getInstance();
+                    StorageReference storageRef = storage.getReferenceFromUrl("gs://e-lkpd.appspot.com");
+                    StorageReference islandRef = storageRef.child("Konten").child("E-LKPD Perubahan Lingkungan.pdf");
 
-                File rootPath = new File(Environment.getExternalStorageDirectory(), "E-LKPD Perubahan Lingkungan");
-                if(!rootPath.exists()) {
-                    rootPath.mkdirs();
+                    File rootPath = new File(Environment.getExternalStorageDirectory(), "E-LKPD Perubahan Lingkungan");
+                    if (!rootPath.exists()) {
+                        rootPath.mkdirs();
+                    }
+
+                    final File localFile = new File(rootPath, "E-LKPD Perubahan Lingkungan.pdf");
+
+                    islandRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                            Log.e("firebase ", ";local tem file created  created " + localFile.toString());
+                            Utils.hideDialog();
+                            Toast.makeText(requireContext(), "Berhasil mengunduh file", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception exception) {
+                            Log.e("firebase ", ";local tem file not created  created " + exception.toString());
+                            Utils.hideDialog();
+                            Toast.makeText(requireContext(), "Gagal mengunduh file", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else {
+                    requestPermission();
                 }
-
-                final File localFile = new File(rootPath,"E-LKPD Perubahan Lingkungan.pdf");
-
-                islandRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                        Log.e("firebase ",";local tem file created  created " +localFile.toString());
-                        Utils.hideDialog();
-                        Toast.makeText(requireContext(),"Berhasil mengunduh file",Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        Log.e("firebase ",";local tem file not created  created " +exception.toString());
-                        Utils.hideDialog();
-                        Toast.makeText(requireContext(),"Gagal mengunduh file",Toast.LENGTH_SHORT).show();
-                    }
-                });
             }
         });
 
         fabShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                File apkStorage = new File(
-                        Environment.getExternalStorageDirectory(),"E-LKPD Perubahan Lingkungan");
-
-                //If file is not present then display Toast
-                if (!apkStorage.exists()) {
-                    Toast.makeText(requireActivity(), "Anda belum mengunduh file ", Toast.LENGTH_SHORT).show();
+                if(checkPermission()){
+                    File apkStorage = new File(Environment.getExternalStorageDirectory(), "E-LKPD Perubahan Lingkungan");
+                    if (!apkStorage.exists()) {
+                        Toast.makeText(requireActivity(), "Anda belum mengunduh file ", Toast.LENGTH_SHORT).show();
+                    } else {
+                        File outputFile = new File(Environment.getExternalStorageDirectory() + "/E-LKPD Perubahan Lingkungan", "E-LKPD Perubahan Lingkungan.pdf");
+                        Uri uri = Uri.fromFile(outputFile);
+                        Intent share = new Intent();
+                        share.setType("application/pdf");
+                        share.putExtra(Intent.EXTRA_STREAM, uri);
+                        share.putExtra(Intent.EXTRA_SUBJECT,
+                                "Sharing File E-LKPD Perubahan Lingkungan...");
+                        share.putExtra(Intent.EXTRA_TEXT, "Sharing File E-LKPD Perubahan Lingkungan...");
+                        startActivity(Intent.createChooser(share, "Share File E-LKPD Perubahan Lingkungan"));
+                    }
                 }else{
-                    File outputFile = new File(Environment.getExternalStorageDirectory()+"/E-LKPD Perubahan Lingkungan", "E-LKPD Perubahan Lingkungan.pdf");
-                    Uri uri = Uri.fromFile(outputFile);
-
-                    Intent share = new Intent();
-//                share.setAction(Intent.ACTION_SEND);
-                    share.setType("application/pdf");
-                    share.putExtra(Intent.EXTRA_STREAM, uri);
-                    share.putExtra(Intent.EXTRA_SUBJECT,
-                            "Sharing File E-LKPD Perubahan Lingkungan...");
-                    share.putExtra(Intent.EXTRA_TEXT, "Sharing File E-LKPD Perubahan Lingkungan...");
-
-                    startActivity(Intent.createChooser(share, "Share File E-LKPD Perubahan Lingkungan"));
-//                share.setPackage("com.whatsapp");
-
-//                requireActivity().startActivity(share);
+                    requestPermission();
                 }
             }
         });
         return root;
     }
 
+    private void requestPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            Toast.makeText(requireContext(), " Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
+        } else {
+            int PERMISSION_REQUEST_CODE = 1;
+            ActivityCompat.requestPermissions(requireActivity(), new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    private boolean checkPermission() {
+        int result = ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        return result == PackageManager.PERMISSION_GRANTED;
+    }
 }
