@@ -199,7 +199,7 @@ public class HomeActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.login_guru) {
             if(isLogged){
-                Toast.makeText(getBaseContext(), "Anda suda login sebagai "+type, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "Anda sudah login sebagai "+type, Toast.LENGTH_SHORT).show();
             }else{
                 showLoginDialogGuru();
             }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">E-LKPD</string>
+    <string name="app_name">E-LKPD Perubahan Lingkungan</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -43,7 +43,13 @@
     <string name="soal">Aktivitas</string>
     <string name="jawaban">Evaluasi</string>
 
-    <string name="_1a"> Tidak seimbangnya hubungan eksositem di daerah tersebut</string>
+    <string name="_1a">
+<!--        <![CDATA[-->
+<!--<p>This is a html-formatted string with <b>bold</b> and <i>italic</i> text</p>-->
+<!--<p>This is another paragraph of the same string.</p>-->
+<!--]]>-->
+        Tidak seimbangnya hubungan eksositem di daerah tersebut
+    </string>
     <string name="_1b"> Kualitas lingkungan di daerah tersebut mulai menurun</string>
     <string name="_1c"> Kerusakan lingkungan berupa hutan akibat ulah manusia</string>
     <string name="_1d"> Siklus hidup belelang setan yang begitu sangat cepat</string>
@@ -132,8 +138,5 @@
     <string name="_15c"> Pencemaran air tersebut menyebabkan tanaman di area sungai menjadi mati</string>
     <string name="_15d"> Pencemaran air tersebut menyebabkan mewabahnya bakteri <i>Corynebacterium</i></string>
     <string name="_15e"> Pencemaran air tersebut menyebabkan aliran disungai menjadi menyumbat</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

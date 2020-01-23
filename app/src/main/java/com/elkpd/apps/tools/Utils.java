@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class Utils {
+    public static final String downloadPdfUrl = "https://drive.google.com/open?id=1B2fk4U8Sh9r_xbzM7aPChcrRdIkW7Vqq";
 
     private static ProgressDialog dialog;
     public static void showDialog(Context context){

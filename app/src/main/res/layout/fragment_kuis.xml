@@ -23,7 +23,7 @@
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdf1"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="360dp"
                     android:layout_margin="8dp"/>
             </LinearLayout>
 
@@ -408,7 +408,7 @@
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdf10"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="330dp"
                     android:layout_margin="8dp"/>
             </LinearLayout>
 
@@ -451,7 +451,7 @@
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdf11"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="340dp"
                     android:layout_margin="8dp"/>
             </LinearLayout>
 
@@ -537,7 +537,7 @@
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdf13"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="340dp"
                     android:layout_margin="8dp"/>
             </LinearLayout>
 
@@ -580,7 +580,7 @@
                 <com.github.barteksc.pdfviewer.PDFView
                     android:id="@+id/pdf14"
                     android:layout_width="match_parent"
-                    android:layout_height="260dp"
+                    android:layout_height="290dp"
                     android:layout_margin="8dp"/>
             </LinearLayout>
 

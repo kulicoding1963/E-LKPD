@@ -333,95 +333,95 @@ public class KuisFragment extends Fragment {
     }
 
     private void dataPilihan() {
-        rbPil1a.setText(getResources().getString(R.string._1a));
-        rbPil1b.setText(getResources().getString(R.string._1b));
-        rbPil1c.setText(getResources().getString(R.string._1c));
-        rbPil1d.setText(getResources().getString(R.string._1d));
-        rbPil1e.setText(getResources().getString(R.string._1e));
+        rbPil1a.setText(getResources().getText(R.string._1a));
+        rbPil1b.setText(getResources().getText(R.string._1b));
+        rbPil1c.setText(getResources().getText(R.string._1c));
+        rbPil1d.setText(getResources().getText(R.string._1d));
+        rbPil1e.setText(getResources().getText(R.string._1e));
 
-        rbPil2a.setText(getResources().getString(R.string._2a));
-        rbPil2b.setText(getResources().getString(R.string._2b));
-        rbPil2c.setText(getResources().getString(R.string._2c));
-        rbPil2d.setText(getResources().getString(R.string._2d));
-        rbPil2e.setText(getResources().getString(R.string._2e));
+        rbPil2a.setText(getResources().getText(R.string._2a));
+        rbPil2b.setText(getResources().getText(R.string._2b));
+        rbPil2c.setText(getResources().getText(R.string._2c));
+        rbPil2d.setText(getResources().getText(R.string._2d));
+        rbPil2e.setText(getResources().getText(R.string._2e));
 
-        rbPil3a.setText(getResources().getString(R.string._3a));
-        rbPil3b.setText(getResources().getString(R.string._3b));
-        rbPil3c.setText(getResources().getString(R.string._3c));
-        rbPil3d.setText(getResources().getString(R.string._3d));
-        rbPil3e.setText(getResources().getString(R.string._3e));
+        rbPil3a.setText(getResources().getText(R.string._3a));
+        rbPil3b.setText(getResources().getText(R.string._3b));
+        rbPil3c.setText(getResources().getText(R.string._3c));
+        rbPil3d.setText(getResources().getText(R.string._3d));
+        rbPil3e.setText(getResources().getText(R.string._3e));
 
-        rbPil4a.setText(getResources().getString(R.string._4a));
-        rbPil4b.setText(getResources().getString(R.string._4b));
-        rbPil4c.setText(getResources().getString(R.string._4c));
-        rbPil4d.setText(getResources().getString(R.string._4d));
-        rbPil4e.setText(getResources().getString(R.string._4e));
+        rbPil4a.setText(getResources().getText(R.string._4a));
+        rbPil4b.setText(getResources().getText(R.string._4b));
+        rbPil4c.setText(getResources().getText(R.string._4c));
+        rbPil4d.setText(getResources().getText(R.string._4d));
+        rbPil4e.setText(getResources().getText(R.string._4e));
 
-        rbPil5a.setText(getResources().getString(R.string._5a));
-        rbPil5b.setText(getResources().getString(R.string._5b));
-        rbPil5c.setText(getResources().getString(R.string._5c));
-        rbPil5d.setText(getResources().getString(R.string._5d));
-        rbPil5e.setText(getResources().getString(R.string._5e));
+        rbPil5a.setText(getResources().getText(R.string._5a));
+        rbPil5b.setText(getResources().getText(R.string._5b));
+        rbPil5c.setText(getResources().getText(R.string._5c));
+        rbPil5d.setText(getResources().getText(R.string._5d));
+        rbPil5e.setText(getResources().getText(R.string._5e));
 
-        rbPil6a.setText(getResources().getString(R.string._6a));
-        rbPil6b.setText(getResources().getString(R.string._6b));
-        rbPil6c.setText(getResources().getString(R.string._6c));
-        rbPil6d.setText(getResources().getString(R.string._6d));
-        rbPil6e.setText(getResources().getString(R.string._6e));
+        rbPil6a.setText(getResources().getText(R.string._6a));
+        rbPil6b.setText(getResources().getText(R.string._6b));
+        rbPil6c.setText(getResources().getText(R.string._6c));
+        rbPil6d.setText(getResources().getText(R.string._6d));
+        rbPil6e.setText(getResources().getText(R.string._6e));
 
-        rbPil7a.setText(getResources().getString(R.string._7a));
-        rbPil7b.setText(getResources().getString(R.string._7b));
-        rbPil7c.setText(getResources().getString(R.string._7c));
-        rbPil7d.setText(getResources().getString(R.string._7d));
-        rbPil7e.setText(getResources().getString(R.string._7e));
+        rbPil7a.setText(getResources().getText(R.string._7a));
+        rbPil7b.setText(getResources().getText(R.string._7b));
+        rbPil7c.setText(getResources().getText(R.string._7c));
+        rbPil7d.setText(getResources().getText(R.string._7d));
+        rbPil7e.setText(getResources().getText(R.string._7e));
 
-        rbPil8a.setText(getResources().getString(R.string._8a));
-        rbPil8b.setText(getResources().getString(R.string._8b));
-        rbPil8c.setText(getResources().getString(R.string._8c));
-        rbPil8d.setText(getResources().getString(R.string._8d));
-        rbPil8e.setText(getResources().getString(R.string._8e));
+        rbPil8a.setText(getResources().getText(R.string._8a));
+        rbPil8b.setText(getResources().getText(R.string._8b));
+        rbPil8c.setText(getResources().getText(R.string._8c));
+        rbPil8d.setText(getResources().getText(R.string._8d));
+        rbPil8e.setText(getResources().getText(R.string._8e));
 
-        rbPil9a.setText(getResources().getString(R.string._9a));
-        rbPil9b.setText(getResources().getString(R.string._9b));
-        rbPil9c.setText(getResources().getString(R.string._9c));
-        rbPil9d.setText(getResources().getString(R.string._9d));
-        rbPil9e.setText(getResources().getString(R.string._9e));
+        rbPil9a.setText(getResources().getText(R.string._9a));
+        rbPil9b.setText(getResources().getText(R.string._9b));
+        rbPil9c.setText(getResources().getText(R.string._9c));
+        rbPil9d.setText(getResources().getText(R.string._9d));
+        rbPil9e.setText(getResources().getText(R.string._9e));
 
-        rbPil10a.setText(getResources().getString(R.string._10a));
-        rbPil10b.setText(getResources().getString(R.string._10b));
-        rbPil10c.setText(getResources().getString(R.string._10c));
-        rbPil10d.setText(getResources().getString(R.string._10d));
-        rbPil10e.setText(getResources().getString(R.string._10e));
+        rbPil10a.setText(getResources().getText(R.string._10a));
+        rbPil10b.setText(getResources().getText(R.string._10b));
+        rbPil10c.setText(getResources().getText(R.string._10c));
+        rbPil10d.setText(getResources().getText(R.string._10d));
+        rbPil10e.setText(getResources().getText(R.string._10e));
 
-        rbPil11a.setText(getResources().getString(R.string._11a));
-        rbPil11b.setText(getResources().getString(R.string._11b));
-        rbPil11c.setText(getResources().getString(R.string._11c));
-        rbPil11d.setText(getResources().getString(R.string._11d));
-        rbPil11e.setText(getResources().getString(R.string._11e));
+        rbPil11a.setText(getResources().getText(R.string._11a));
+        rbPil11b.setText(getResources().getText(R.string._11b));
+        rbPil11c.setText(getResources().getText(R.string._11c));
+        rbPil11d.setText(getResources().getText(R.string._11d));
+        rbPil11e.setText(getResources().getText(R.string._11e));
 
-        rbPil12a.setText(getResources().getString(R.string._12a));
-        rbPil12b.setText(getResources().getString(R.string._12b));
-        rbPil12c.setText(getResources().getString(R.string._12c));
-        rbPil12d.setText(getResources().getString(R.string._12d));
-        rbPil12e.setText(getResources().getString(R.string._12e));
+        rbPil12a.setText(getResources().getText(R.string._12a));
+        rbPil12b.setText(getResources().getText(R.string._12b));
+        rbPil12c.setText(getResources().getText(R.string._12c));
+        rbPil12d.setText(getResources().getText(R.string._12d));
+        rbPil12e.setText(getResources().getText(R.string._12e));
 
-        rbPil13a.setText(getResources().getString(R.string._13a));
-        rbPil13b.setText(getResources().getString(R.string._13b));
-        rbPil13c.setText(getResources().getString(R.string._13c));
-        rbPil13d.setText(getResources().getString(R.string._13d));
-        rbPil13e.setText(getResources().getString(R.string._13e));
+        rbPil13a.setText(getResources().getText(R.string._13a));
+        rbPil13b.setText(getResources().getText(R.string._13b));
+        rbPil13c.setText(getResources().getText(R.string._13c));
+        rbPil13d.setText(getResources().getText(R.string._13d));
+        rbPil13e.setText(getResources().getText(R.string._13e));
 
-        rbPil14a.setText(getResources().getString(R.string._14a));
-        rbPil14b.setText(getResources().getString(R.string._14b));
-        rbPil14c.setText(getResources().getString(R.string._14c));
-        rbPil14d.setText(getResources().getString(R.string._14d));
-        rbPil14e.setText(getResources().getString(R.string._14e));
+        rbPil14a.setText(getResources().getText(R.string._14a));
+        rbPil14b.setText(getResources().getText(R.string._14b));
+        rbPil14c.setText(getResources().getText(R.string._14c));
+        rbPil14d.setText(getResources().getText(R.string._14d));
+        rbPil14e.setText(getResources().getText(R.string._14e));
 
-        rbPil15a.setText(Html.fromHtml(getResources().getString(R.string._15a)));
-        rbPil15b.setText(getResources().getString(R.string._15b));
-        rbPil15c.setText(getResources().getString(R.string._15c));
-        rbPil15d.setText(getResources().getString(R.string._15d));
-        rbPil15e.setText(getResources().getString(R.string._15e));
+        rbPil15a.setText(getResources().getText(R.string._15a));
+        rbPil15b.setText(getResources().getText(R.string._15b));
+        rbPil15c.setText(getResources().getText(R.string._15c));
+        rbPil15d.setText(getResources().getText(R.string._15d));
+        rbPil15e.setText(getResources().getText(R.string._15e));
     }
 
     private double nilai() {

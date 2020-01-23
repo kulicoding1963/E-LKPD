@@ -32,7 +32,8 @@ public class MateriActivity extends AppCompatActivity {
         Button btn_7 = findViewById(R.id.btn_7);
 
         if (materi == 1) {
-            btn_7.setVisibility(View.GONE);
+            btn_7.setVisibility(View.INVISIBLE);
+            btn_7.setEnabled(false);
             btn_1.setText("Tujuan Pembelajaran");
             btn_2.setText("Petunjuk Kegiatan Pembelajaran");
             btn_3.setText("Informasi");
@@ -40,6 +41,12 @@ public class MateriActivity extends AppCompatActivity {
             btn_5.setText("Aktivitas 2 Perubahan Lingkungan");
             btn_6.setText("Aktivitas 3 Pemanasan Global");
         } else if (materi == 2) {
+            btn_5.setVisibility(View.VISIBLE);
+            btn_6.setVisibility(View.VISIBLE);
+            btn_7.setVisibility(View.VISIBLE);
+            btn_5.setEnabled(true);
+            btn_6.setEnabled(true);
+            btn_7.setEnabled(true);
             btn_1.setText("Tujuan Pembelajaran");
             btn_2.setText("Petunjuk Kegiatan Pembelajaran");
             btn_3.setText("Informasi");
@@ -48,9 +55,12 @@ public class MateriActivity extends AppCompatActivity {
             btn_6.setText("Aktivitas 3 Pencemaran Tanah");
             btn_7.setText("Aktivitas 4 Pencemaran Suara");
         } else if (materi == 3) {
-            btn_5.setVisibility(View.GONE);
-            btn_6.setVisibility(View.GONE);
-            btn_7.setVisibility(View.GONE);
+            btn_5.setVisibility(View.INVISIBLE);
+            btn_6.setVisibility(View.INVISIBLE);
+            btn_7.setVisibility(View.INVISIBLE);
+            btn_5.setEnabled(false);
+            btn_6.setEnabled(false);
+            btn_7.setEnabled(false);
             btn_1.setText("Tujuan Pembelajaran");
             btn_2.setText("Petunjuk Kegiatan Pembelajaran");
             btn_3.setText("Aktivitas 1 Pengelompokan Limbah");
