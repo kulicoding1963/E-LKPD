@@ -206,6 +206,7 @@ public class Evaluasi31Fragment extends Fragment {
                 String jawab2 = answer2.getText().toString().trim();
                 String jawab4 = answer4.getText().toString().trim();
                 String jawab6 = answer6.getText().toString().trim();
+                jawab6 = "Field di Hapus";
 
                 if (jawab1.isEmpty() || jawab2.isEmpty() || uri1 == null || jawab4.isEmpty() || uri2 == null || jawab6.isEmpty() || uri3 == null) {
                     Toast.makeText(requireContext(), "Isi jawaban yang kosong", Toast.LENGTH_SHORT).show();

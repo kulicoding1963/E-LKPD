@@ -105,6 +105,7 @@
             app:srcCompat="@drawable/upload" />
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/answer6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -186,12 +187,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="16dp"
-            android:text="5F. Photo Tabel Hasil Pengamatan"
+            android:text="5. Photo Laporan Singkat"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/answer4" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/textView51"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

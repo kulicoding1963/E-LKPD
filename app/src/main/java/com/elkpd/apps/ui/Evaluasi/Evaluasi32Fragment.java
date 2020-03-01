@@ -40,12 +40,13 @@ import java.util.HashMap;
 public class Evaluasi32Fragment extends Fragment {
 
     private EditText answer1, answer2, answer4;
-    private Uri[] uri = new Uri[24];
-    private ImageView[] images = new ImageView[24];
+    private Uri[] uri = new Uri[28];
+    private ImageView[] images = new ImageView[28];
     private StorageReference storageRef;
     private DatabaseReference mDatabase;
 
-    public Evaluasi32Fragment() {}
+    public Evaluasi32Fragment() {
+    }
 
 
     @Override
@@ -84,6 +85,10 @@ public class Evaluasi32Fragment extends Fragment {
         images[21] = root.findViewById(R.id.answer25);
         images[22] = root.findViewById(R.id.answer26);
         images[23] = root.findViewById(R.id.answer27);
+        images[24] = root.findViewById(R.id.answer28);
+        images[25] = root.findViewById(R.id.answer29);
+        images[26] = root.findViewById(R.id.answer30);
+        images[27] = root.findViewById(R.id.answer31);
 
         Button submit = root.findViewById(R.id.btn_submit);
 
@@ -96,7 +101,7 @@ public class Evaluasi32Fragment extends Fragment {
             answer1.setEnabled(true);
             answer2.setEnabled(true);
             answer4.setEnabled(true);
-            for (int x = 0; x < 24; x++) {
+            for (int x = 0; x < 28; x++) {
                 images[x].setEnabled(true);
             }
         } else {
@@ -104,7 +109,7 @@ public class Evaluasi32Fragment extends Fragment {
             answer1.setEnabled(false);
             answer2.setEnabled(false);
             answer4.setEnabled(false);
-            for (int x = 0; x < 24; x++) {
+            for (int x = 0; x < 28; x++) {
                 images[x].setEnabled(false);
             }
 
@@ -356,7 +361,83 @@ public class Evaluasi32Fragment extends Fragment {
                                                                                                                                                                                                                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                                                                                                                                                                                                                     .skipMemoryCache(true)
                                                                                                                                                                                                                     .into(images[23]);
-                                                                                                                                                                                                            Utils.hideDialog();
+                                                                                                                                                                                                            StorageReference pathReference = storageRef.child("KegiatanTiga").child("AktivitasDua").child(hasilEvaluasi.getId() + "24.jpg");
+                                                                                                                                                                                                            pathReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                                                                                                                                                                @Override
+                                                                                                                                                                                                                public void onSuccess(Uri uri) {
+                                                                                                                                                                                                                    Glide.with(requireContext())
+                                                                                                                                                                                                                            .load(uri)
+                                                                                                                                                                                                                            .error(R.drawable.ic_error)
+                                                                                                                                                                                                                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                                                                                                                                                                                                                            .skipMemoryCache(true)
+                                                                                                                                                                                                                            .into(images[24]);
+                                                                                                                                                                                                                    StorageReference pathReference = storageRef.child("KegiatanTiga").child("AktivitasDua").child(hasilEvaluasi.getId() + "25.jpg");
+                                                                                                                                                                                                                    pathReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                                                                                                                                                                        @Override
+                                                                                                                                                                                                                        public void onSuccess(Uri uri) {
+                                                                                                                                                                                                                            Glide.with(requireContext())
+                                                                                                                                                                                                                                    .load(uri)
+                                                                                                                                                                                                                                    .error(R.drawable.ic_error)
+                                                                                                                                                                                                                                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                                                                                                                                                                                                                                    .skipMemoryCache(true)
+                                                                                                                                                                                                                                    .into(images[25]);
+                                                                                                                                                                                                                            StorageReference pathReference = storageRef.child("KegiatanTiga").child("AktivitasDua").child(hasilEvaluasi.getId() + "26.jpg");
+                                                                                                                                                                                                                            pathReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                                                                                                                                                                                @Override
+                                                                                                                                                                                                                                public void onSuccess(Uri uri) {
+                                                                                                                                                                                                                                    Glide.with(requireContext())
+                                                                                                                                                                                                                                            .load(uri)
+                                                                                                                                                                                                                                            .error(R.drawable.ic_error)
+                                                                                                                                                                                                                                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                                                                                                                                                                                                                                            .skipMemoryCache(true)
+                                                                                                                                                                                                                                            .into(images[26]);
+                                                                                                                                                                                                                                    StorageReference pathReference = storageRef.child("KegiatanTiga").child("AktivitasDua").child(hasilEvaluasi.getId() + "27.jpg");
+                                                                                                                                                                                                                                    pathReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                                                                                                                                                                                        @Override
+                                                                                                                                                                                                                                        public void onSuccess(Uri uri) {
+                                                                                                                                                                                                                                            Glide.with(requireContext())
+                                                                                                                                                                                                                                                    .load(uri)
+                                                                                                                                                                                                                                                    .error(R.drawable.ic_error)
+                                                                                                                                                                                                                                                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                                                                                                                                                                                                                                                    .skipMemoryCache(true)
+                                                                                                                                                                                                                                                    .into(images[27]);
+                                                                                                                                                                                                                                            Utils.hideDialog();
+
+                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                    }).addOnFailureListener(new OnFailureListener() {
+                                                                                                                                                                                                                                        @Override
+                                                                                                                                                                                                                                        public void onFailure(@NonNull Exception e) {
+                                                                                                                                                                                                                                            Utils.hideDialog();
+                                                                                                                                                                                                                                            Toast.makeText(requireContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                    });
+
+                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                            }).addOnFailureListener(new OnFailureListener() {
+                                                                                                                                                                                                                                @Override
+                                                                                                                                                                                                                                public void onFailure(@NonNull Exception e) {
+                                                                                                                                                                                                                                    Utils.hideDialog();
+                                                                                                                                                                                                                                    Toast.makeText(requireContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                            });
+
+                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                    }).addOnFailureListener(new OnFailureListener() {
+                                                                                                                                                                                                                        @Override
+                                                                                                                                                                                                                        public void onFailure(@NonNull Exception e) {
+                                                                                                                                                                                                                            Utils.hideDialog();
+                                                                                                                                                                                                                            Toast.makeText(requireContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                    });
+
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                            }).addOnFailureListener(new OnFailureListener() {
+                                                                                                                                                                                                                @Override
+                                                                                                                                                                                                                public void onFailure(@NonNull Exception e) {
+                                                                                                                                                                                                                    Utils.hideDialog();
+                                                                                                                                                                                                                    Toast.makeText(requireContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                            });
 
                                                                                                                                                                                                         }
                                                                                                                                                                                                     }).addOnFailureListener(new OnFailureListener() {
@@ -828,6 +909,50 @@ public class Evaluasi32Fragment extends Fragment {
             }
         });
 
+        images[24].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkPermission()) {
+                    showFileChooser(24);
+                } else {
+                    requestPermission();
+                }
+            }
+        });
+
+        images[25].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkPermission()) {
+                    showFileChooser(25);
+                } else {
+                    requestPermission();
+                }
+            }
+        });
+
+        images[26].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkPermission()) {
+                    showFileChooser(26);
+                } else {
+                    requestPermission();
+                }
+            }
+        });
+
+        images[27].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkPermission()) {
+                    showFileChooser(27);
+                } else {
+                    requestPermission();
+                }
+            }
+        });
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -835,7 +960,7 @@ public class Evaluasi32Fragment extends Fragment {
                 String jawab2 = answer2.getText().toString().trim();
                 String jawab4 = answer4.getText().toString().trim();
                 boolean result = false;
-                for (int x = 0; x < 24; x++) {
+                for (int x = 0; x < 28; x++) {
                     if (uri[x] == null) {
                         result = true;
                         break;

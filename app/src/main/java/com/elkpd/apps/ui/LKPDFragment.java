@@ -35,9 +35,6 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class LKPDFragment extends Fragment {
 
     private FloatingActionButton fabAdd, fabDownload, fabShare;

@@ -36,7 +36,7 @@ public class MateriActivity extends AppCompatActivity {
             btn_7.setEnabled(false);
             btn_1.setText("Tujuan Pembelajaran");
             btn_2.setText("Petunjuk Kegiatan Pembelajaran");
-            btn_3.setText("Informasi");
+            btn_3.setText("Materi");
             btn_4.setText("Aktivitas 1 Perubahan Lingkungan");
             btn_5.setText("Aktivitas 2 Perubahan Lingkungan");
             btn_6.setText("Aktivitas 3 Pemanasan Global");
@@ -49,7 +49,7 @@ public class MateriActivity extends AppCompatActivity {
             btn_7.setEnabled(true);
             btn_1.setText("Tujuan Pembelajaran");
             btn_2.setText("Petunjuk Kegiatan Pembelajaran");
-            btn_3.setText("Informasi");
+            btn_3.setText("Materi");
             btn_4.setText("Aktivitas 1 Pencemaran Udara");
             btn_5.setText("Aktivitas 2 Pencemaran Air");
             btn_6.setText("Aktivitas 3 Pencemaran Tanah");

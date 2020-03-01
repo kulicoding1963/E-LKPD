@@ -34,7 +34,7 @@
     <string name="petunjuk_penggunaan">Petunjuk Penggunaan</string>
     <string name="kurikulum">Kurikulum</string>
     <string name="kegiatan_pembelajaran">Kegiatan Pembelajaran</string>
-    <string name="kuis">Kuis</string>
+    <string name="kuis">Quiz</string>
     <string name="daftar_pustaka">Daftar Pustaka</string>
     <string name="e_lkpd">E-LKPD</string>
     <string name="lkpd_mobile_learning_ini_merupakan_media_bahan_ajar_berbasis_problem_based_learning_masalah_yang_dapat_membantu_peserta_didik_dalam_belajar_memecahkan_masalah_dan_mengajak_peserta_didik_untuk_aktif_selama_pembelajaran_terkait_pokok_bahasan_perubahan_lingkungan_serta_untuk_meningkatkan_literasi_lingkungan_peserta_didik_kelas_x_sma">LKPD <i>mobile learning</i> ini merupakan media/bahan ajar berbasis <i>Problem Based Learning</i>/masalah yang dapat membantu peserta didik dalam belajar memecahkan masalah dan mengajak peserta didik untuk aktif selama pembelajaran terkait pokok bahasan perubahan lingkungan serta untuk meningkatkan literasi lingkungan peserta didik kelas X SMA.</string>
@@ -75,7 +75,7 @@
 
     <string name="_5a"> Menyebabkan kerusakan lahan pertanian</string>
     <string name="_5b"> Terjadi pencemaran tanah berupa kekeringan</string>
-    <string name="_5c"> Menyebabkan gagal penen bagi para petani</string>
+    <string name="_5c"> Menyebabkan banyak tanaman yang mati</string>
     <string name="_5d"> Kekeringan mengakibatkan munculnya hama</string>
     <string name="_5e"> Menimbulkan radiasi panas di lahan petani</string>
 
@@ -91,10 +91,10 @@
     <string name="_7d"> Asma</string>
     <string name="_7e"> Demam</string>
 
-    <string name="_8a"> Karena fungsi penyerapan air tanah di kawasan tersebut terganggu</string>
-    <string name="_8b"> Flora dan fauna di daerah karst gunung sewu tidak bisa bertahan hidup</string>
-    <string name="_8c"> Karena ekosistem di daerah gunung sewu sudah tidak seimbang lagi</string>
-    <string name="_8d"> Karena daerah kasrt gunung sewu tersebut menjadi gundul dan gersang</string>
+    <string name="_8a"> Karena fungsi penyerapan air tanah di daerah tersebut terganggu</string>
+    <string name="_8b"> Flora dan fauna di daerah tersebut tidak bisa bertahan hidup</string>
+    <string name="_8c"> Karena ekosistem di daerah tersebut sudah tidak seimbang lagi</string>
+    <string name="_8d"> Karena daerah tersebut menjadi gundul dan gersang</string>
     <string name="_8e"> Kerena fungsi penyerapan karbondioksida di atmosfer terganggu</string>
 
     <string name="_9a"> Pikukuh karuhun yaitu kepercayaan yang melarang masyarakatnya memasuki hutan, menebang pohon, membuka ladang dan mengambil hasil hutan lainnya. </string>

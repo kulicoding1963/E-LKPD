@@ -88,7 +88,7 @@ public class HomeActivity extends AppCompatActivity {
         beranda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                titleBar.setText(getResources().getString(R.string.beranda));
+                titleBar.setText(getResources().getString(R.string.petunjuk_penggunaan));
                 Fragment fragment = new BerandaFragment();
                 displaySelected(fragment);
             }
